@@ -1,4 +1,5 @@
 # Obtain list of five words with more than 8 letters from random wikipedia page
+# Steps: get page, get text, conver to list, get 5 random numbers, get five words
 
 import requests
 from bs4 import BeautifulSoup
@@ -26,8 +27,11 @@ if __name__ == '__main__':
     response = requests.get(
         url="https://en.wikipedia.org/wiki/Special:Random",
     )
-
+    # Get page and text
     soup = BeautifulSoup(response.text, 'html.parser')
-    print(soup.body.contents[0])
     text = soup.get_text()
-    print(text)
+    # Turn page text into list
+    text_list = text.split()
+    # Get 5 random numbers between
+
+    print(text_list)
