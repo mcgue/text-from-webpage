@@ -35,16 +35,18 @@ if __name__ == '__main__':
     # Turn page text into list
     text_list = text.split()
 
+    text_list_8 = [i for i in text_list if len(i) > 7]
+
     # Get 5 random numbers between
     nums_random = []
     i=0
     while i < 5:
-        j = random.randint(0,len(text_list))
+        j = random.randint(0,len(text_list_8))
         if j not in nums_random:
             nums_random.append(j)
             i+=1
 
     print(nums_random)
 
-    # print(text_list)
+    print(text_list_8)
     # print(len(text_list))
