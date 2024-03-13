@@ -39,12 +39,10 @@ if __name__ == '__main__':
 
     # Get 5 random numbers between
     nums_random = []
-    i=0
-    while i < 5:
-        j = random.randint(0,len(text_list_8))
-        if j not in nums_random:
-            nums_random.append(j)
-            i+=1
+    for n in range (5):
+        i = random.randint(0,len(text_list_8))
+        if i not in nums_random:
+            nums_random.append(i)
 
     print(nums_random)
 
